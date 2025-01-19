@@ -62,3 +62,29 @@ function createCustomMarker(color) {
     div.style.cursor = 'pointer';
     return div;
 }
+
+// ----- Code d'authentification et gestion du bouton "S'identifier" / "Mon compte" -----
+// Exemple d'authentification simulée (en réalité, vous devriez utiliser des sessions ou des cookies)
+let isLoggedIn = false;  // Cette variable peut être mise à true lorsqu'un utilisateur est connecté.
+
+// Fonction pour mettre à jour le bouton selon l'état de la connexion
+function updateAuthButton() {
+    const authButton = document.getElementById('authButton');
+    
+    if (isLoggedIn) {
+        // Si l'utilisateur est connecté, afficher "Mon compte"
+        authButton.textContent = "Mon compte";
+    } else {
+        // Si l'utilisateur n'est pas connecté, afficher "S'identifier"
+        authButton.textContent = "S'identifier";
+    }
+}
+
+// Appel initial de la fonction pour définir l'état du bouton
+updateAuthButton();
+
+// Ajout d'un gestionnaire d'événement pour simuler la connexion/déconnexion
+document.getElementById('authButton').addEventListener('click', function() {
+    isLoggedIn = !isLoggedIn;  // Inverse l'état de connexion
+    updateAuthButton();        // Met à jour le texte du bouton en fonction de l'état
+});
