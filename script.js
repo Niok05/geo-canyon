@@ -14,6 +14,7 @@ map.addControl(new mapboxgl.NavigationControl());
 
 // Canyon du Verdon
 const marker1 = new mapboxgl.Marker({ color: 'blue' })
+element: createCustomMarker() // Utilisation de notre fonction pour créer un marqueur personnalisé
     .setLngLat([6.9561, 43.8374]) // Coordonnées du canyon du Verdon
     .setPopup(
         new mapboxgl.Popup({ offset: 25 })
@@ -27,6 +28,7 @@ const marker1 = new mapboxgl.Marker({ color: 'blue' })
 
 // Canyon des Ecouges
 const marker2 = new mapboxgl.Marker({ color: 'red' })
+element: createCustomMarker() // Utilisation de notre fonction pour créer un marqueur personnalisé
     .setLngLat([5.5638, 45.3057]) // Coordonnées du canyon des Ecouges
     .setPopup(
         new mapboxgl.Popup({ offset: 25 })
@@ -39,3 +41,17 @@ const marker2 = new mapboxgl.Marker({ color: 'red' })
     .addTo(map);
 
 // Vous pouvez ajouter plus de marqueurs en répétant le code ci-dessus pour chaque canyon.
+
+__________
+// Fonction pour créer un marqueur personnalisé
+function createCustomMarker() {
+    const div = document.createElement('div');
+    div.className = 'custom-marker';
+    div.style.width = '20px';  // Largeur du marqueur
+    div.style.height = '20px'; // Hauteur du marqueur
+    div.style.backgroundColor = 'blue'; // Couleur du marqueur
+    div.style.borderRadius = '50%'; // Forme ronde
+    div.style.cursor = 'pointer';
+    return div;
+}
+
