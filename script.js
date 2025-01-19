@@ -12,6 +12,21 @@ const map = new mapboxgl.Map({
 // Ajoutez des contrôles de navigation (zoom et rotation)
 map.addControl(new mapboxgl.NavigationControl());
 
+// Canyon des Oules de Freissinières
+
+const marker1 = new mapboxgl.Marker({ color: 'blue' })
+element: createCustomMarker() // Utilisation de notre fonction pour créer un marqueur personnalisé
+    .setLngLat([6.26517, 44.43485]) // Coordonnées du canyon des Oules de Freissinières
+    .setPopup(
+        new mapboxgl.Popup({ offset: 25 })
+            .setHTML(`
+                <h3>Canyon des Oules de Freissinières</h3>
+                <p>Un des plus beaux canyons d’Europe !</p>
+                <a href="pages/canyon_des_oules_de_freissinieres.html" target="_blank">Plus d'infos</a>
+            `)
+    )
+    .addTo(map);
+
 // Canyon du Verdon
 const marker1 = new mapboxgl.Marker({ color: 'blue' })
 element: createCustomMarker() // Utilisation de notre fonction pour créer un marqueur personnalisé
@@ -21,7 +36,7 @@ element: createCustomMarker() // Utilisation de notre fonction pour créer un ma
             .setHTML(`
                 <h3>Canyon du Verdon</h3>
                 <p>Un des plus beaux canyons d’Europe !</p>
-                <a href="verdon.html" target="_blank">Plus d'infos</a>
+                <a href="pages/verdon.html" target="_blank">Plus d'infos</a>
             `)
     )
     .addTo(map);
