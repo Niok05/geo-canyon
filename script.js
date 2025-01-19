@@ -12,25 +12,29 @@ const map = new mapboxgl.Map({
 // Ajoutez des contrôles de navigation (zoom et rotation)
 map.addControl(new mapboxgl.NavigationControl());
 
-// Exemple : Ajouter un marqueur avec une info-bulle redirigeant vers une page
+// Canyon du Verdon
 const marker1 = new mapboxgl.Marker({ color: 'blue' })
     .setLngLat([6.9561, 43.8374]) // Coordonnées du canyon du Verdon
     .setPopup(
         new mapboxgl.Popup({ offset: 25 })
             .setHTML(`
-                <h3>Canyon de Verdon</h3>
+                <h3>Canyon du Verdon</h3>
                 <p>Un des plus beaux canyons d’Europe !</p>
                 <a href="verdon.html" target="_blank">Plus d'infos</a>
             `)
     )
     .addTo(map);
 
-// Exemple : Ajouter un deuxième marqueur pour un autre canyon
+// Canyon des Ecouges
 const marker2 = new mapboxgl.Marker({ color: 'red' })
     .setLngLat([5.5638, 45.3057]) // Coordonnées du canyon des Ecouges
     .setPopup(
         new mapboxgl.Popup({ offset: 25 })
-            .setHTML('<h3>Canyon des Ecouges</h3><p>Aventure et adrénaline garanties !</p>')
+            .setHTML(`
+                <h3>Canyon de Verdon</h3>
+                <p>Un des plus beaux canyons d’Europe !</p>
+                <a href="canyon_des_ecouges.html" target="_blank">Plus d'infos</a>
+            `)
     )
     .addTo(map);
 
