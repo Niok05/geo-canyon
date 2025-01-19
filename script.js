@@ -13,9 +13,7 @@ const map = new mapboxgl.Map({
 map.addControl(new mapboxgl.NavigationControl());
 
 // Canyon des Oules de Freissinières
-
-const marker1 = new mapboxgl.Marker({ color: 'blue' })
-element: createCustomMarker() // Utilisation de notre fonction pour créer un marqueur personnalisé
+const markerOulesdeFreissinieres = new mapboxgl.Marker({ element: createCustomMarker('green') })  // Marqueur pour le canyon des Oules de Freissinières
     .setLngLat([6.26517, 44.43485]) // Coordonnées du canyon des Oules de Freissinières
     .setPopup(
         new mapboxgl.Popup({ offset: 25 })
@@ -28,8 +26,7 @@ element: createCustomMarker() // Utilisation de notre fonction pour créer un ma
     .addTo(map);
 
 // Canyon du Verdon
-const marker1 = new mapboxgl.Marker({ color: 'blue' })
-element: createCustomMarker() // Utilisation de notre fonction pour créer un marqueur personnalisé
+const markerVerdon = new mapboxgl.Marker({ element: createCustomMarker('red') })  // Marqueur pour le canyon du Verdon
     .setLngLat([6.9561, 43.8374]) // Coordonnées du canyon du Verdon
     .setPopup(
         new mapboxgl.Popup({ offset: 25 })
@@ -42,31 +39,26 @@ element: createCustomMarker() // Utilisation de notre fonction pour créer un ma
     .addTo(map);
 
 // Canyon des Ecouges
-const marker2 = new mapboxgl.Marker({ color: 'red' })
-element: createCustomMarker() // Utilisation de notre fonction pour créer un marqueur personnalisé
+const markerEcouges = new mapboxgl.Marker({ element: createCustomMarker('green') })  // Marqueur pour le canyon des Ecouges
     .setLngLat([5.5638, 45.3057]) // Coordonnées du canyon des Ecouges
     .setPopup(
         new mapboxgl.Popup({ offset: 25 })
             .setHTML(`
-                <h3>Canyon de Verdon</h3>
+                <h3>Canyon des Ecouges</h3>
                 <p>Un des plus beaux canyons d’Europe !</p>
                 <a href="pages/canyon_des_ecouges.html" target="_blank">Plus d'infos</a>
             `)
     )
     .addTo(map);
 
-// Vous pouvez ajouter plus de marqueurs en répétant le code ci-dessus pour chaque canyon.
-
-__________
 // Fonction pour créer un marqueur personnalisé
-function createCustomMarker() {
+function createCustomMarker(color) {
     const div = document.createElement('div');
     div.className = 'custom-marker';
     div.style.width = '20px';  // Largeur du marqueur
     div.style.height = '20px'; // Hauteur du marqueur
-    div.style.backgroundColor = 'blue'; // Couleur du marqueur
+    div.style.backgroundColor = color; // Couleur dynamique du marqueur (passée en argument)
     div.style.borderRadius = '50%'; // Forme ronde
     div.style.cursor = 'pointer';
     return div;
 }
-
