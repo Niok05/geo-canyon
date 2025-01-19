@@ -12,14 +12,18 @@ const map = new mapboxgl.Map({
 // Ajoutez des contrôles de navigation (zoom et rotation)
 map.addControl(new mapboxgl.NavigationControl());
 
-// Exemple : Ajouter un marqueur avec une info-bulle pour un canyon
-const marker1 = new mapboxgl.Marker({ color: 'blue' }) // Couleur du marqueur
-    .setLngLat([6.9561, 43.8374]) // Coordonnées du canyon de Verdon (longitude, latitude)
+// Exemple : Ajouter un marqueur avec une info-bulle redirigeant vers une page
+const marker1 = new mapboxgl.Marker({ color: 'blue' })
+    .setLngLat([6.9561, 43.8374]) // Coordonnées du canyon de Verdon
     .setPopup(
-        new mapboxgl.Popup({ offset: 25 }) // Décalage pour positionner la popup
-            .setHTML('<h3>Canyon de Verdon</h3><p>Un des plus beaux canyons d’Europe !</p>')
-    ) // Contenu HTML de l'info-bulle
-    .addTo(map); // Ajout du marqueur à la carte
+        new mapboxgl.Popup({ offset: 25 })
+            .setHTML(`
+                <h3>Canyon de Verdon</h3>
+                <p>Un des plus beaux canyons d’Europe !</p>
+                <a href="verdon.html" target="_blank">En savoir plus</a>
+            `)
+    )
+    .addTo(map);
 
 // Exemple : Ajouter un deuxième marqueur pour un autre canyon
 const marker2 = new mapboxgl.Marker({ color: 'red' })
