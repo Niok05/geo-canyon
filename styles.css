@@ -3,11 +3,41 @@ body {
     margin: 0;
     padding: 0;
 }
+
+/* header CSS */
+
 header {
-    background-color: #0044cc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
     color: white;
-    text-align: center;
-    padding: 20px;
+}
+.header-left h1 a {
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.header-right button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.header-right button:hover {
+    background-color: #45a049;
+}
+
+.header-right button:focus {
+    outline: none;
 }
 main {
     text-align: center;
