@@ -17,8 +17,7 @@ header {
 
 .header-left {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .header-left h1 {
@@ -33,9 +32,9 @@ header {
 }
 
 .header-left .subtitle {
-    margin: 0;
-    font-size: 1em;
-    color: #d3d3d3;
+    margin-left: 10px; /* Espacement entre le titre et le sous-titre */
+    font-size: 1.2em;  /* Taille du sous-titre plus petite que le titre */
+    color: #d3d3d3; /* Couleur gris clair pour le sous-titre */
 }
 
 .header-right button {
