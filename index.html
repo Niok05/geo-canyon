@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,26 +8,32 @@
     <link rel="stylesheet" href="styles.css">
     
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">                    <!-- Mapbox CSS -->
-    
 </head>
+    
 <body>
-    <header>
-        <div class="header-left">
-            <h1>Geo-canyon.com</h1>
-        </div>
-        <div class="header-right">
-            <button id="authButton">S'identifier</button>
-        </div>
-    </header>
-    <main>
+    
+<header>
+    <div class="header-left">
+        <h1>Geo-canyon.com</h1>
+        <p class="subtitle">La référence en topos de canyons</p>
+    </div>
+    <div class="header-right">
+        <button id="authButton">S'identifier</button>
+    </div>
+</header>
+
+<main>
         <h2>La référence en topos de canyons</h2>
         <div id="map" style="width: 100%; height: 500px;"></div>                                               <!-- Carte -->
-    </main>
-    <footer>
+</main>
+   
+<footer>
         <p>&copy; 2025 Geo-canyon.com</p>
-    </footer>
+</footer>
     
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>                            <!-- Mapbox JS -->
     <script src="script.js"></script>
+
 </body>
+    
 </html>
