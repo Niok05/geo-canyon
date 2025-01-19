@@ -33,7 +33,7 @@ const marker2 = new mapboxgl.Marker({ color: 'red' })
             .setHTML(`
                 <h3>Canyon de Verdon</h3>
                 <p>Un des plus beaux canyons d’Europe !</p>
-                <a href="canyon_des_ecouges.html" target="_blank">Plus d'infos</a>
+                <a href="pages/canyon_des_ecouges.html" target="_blank">Plus d'infos</a>
             `)
     )
     .addTo(map);
