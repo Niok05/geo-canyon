@@ -65,7 +65,7 @@ function createCustomMarker(color) {
 
 // ----- Code d'authentification et gestion du bouton "S'identifier" / "Mon compte" -----
 // Exemple d'authentification simulée (en réalité, vous devriez utiliser des sessions ou des cookies)
-let isLoggedIn = false;  // Cette variable peut être mise à true lorsqu'un utilisateur est connecté.
+let isLoggedIn = true;  // Cette variable peut être mise à true lorsqu'un utilisateur est connecté.
 
 // Fonction pour mettre à jour le bouton selon l'état de la connexion
 function updateAuthButton() {
