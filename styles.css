@@ -10,15 +10,32 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 10px 10px 10px;
     background-color: #1E90FF;
     color: white;
 }
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header-left h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
 .header-left h1 a {
     color: white;
     text-decoration: none;
-    font-size: 2em;
     font-weight: bold;
+}
+
+.header-left .subtitle {
+    margin: 0;
+    font-size: 1em;
+    color: #d3d3d3;
 }
 
 .header-right button {
