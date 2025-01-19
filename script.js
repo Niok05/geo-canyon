@@ -55,8 +55,8 @@ const markerEcouges = new mapboxgl.Marker({ element: createCustomMarker('green')
 function createCustomMarker(color) {
     const div = document.createElement('div');
     div.className = 'custom-marker';
-    div.style.width = '20px';  // Largeur du marqueur
-    div.style.height = '20px'; // Hauteur du marqueur
+    div.style.width = '10px';  // Largeur du marqueur
+    div.style.height = '10px'; // Hauteur du marqueur
     div.style.backgroundColor = color; // Couleur dynamique du marqueur (passée en argument)
     div.style.borderRadius = '50%'; // Forme ronde
     div.style.cursor = 'pointer';
