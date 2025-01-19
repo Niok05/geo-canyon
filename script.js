@@ -14,13 +14,13 @@ map.addControl(new mapboxgl.NavigationControl());
 
 // Exemple : Ajouter un marqueur avec une info-bulle redirigeant vers une page
 const marker1 = new mapboxgl.Marker({ color: 'blue' })
-    .setLngLat([6.9561, 43.8374]) // Coordonnées du canyon de Verdon
+    .setLngLat([6.9561, 43.8374]) // Coordonnées du canyon du Verdon
     .setPopup(
         new mapboxgl.Popup({ offset: 25 })
             .setHTML(`
                 <h3>Canyon de Verdon</h3>
                 <p>Un des plus beaux canyons d’Europe !</p>
-                <a href="verdon.html" target="_blank">En savoir plus</a>
+                <a href="verdon.html" target="_blank">Plus d'infos</a>
             `)
     )
     .addTo(map);
