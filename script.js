@@ -4,7 +4,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibmlvazA1IiwiYSI6ImNtNjM5eHViajB5NHUyanNieHh1a
 // Créez la carte
 const map = new mapboxgl.Map({
     container: 'map', // ID de l'élément HTML où afficher la carte
-    style: 'mapbox://styles/mapbox/outdoors-v11', // Style de la carte
+    style: 'mapbox://styles/mapbox/satellite-v9', // Style de la carte
     center: [6.4960, 44.5652], // Coordonnées initiales : Embrun (longitude, latitude)
     zoom: 5 // Niveau de zoom initial (5 = vue régionale, 10 = vue locale)
 });
